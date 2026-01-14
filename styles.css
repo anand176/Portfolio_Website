@@ -1,6 +1,4 @@
-/* ===========================
-   CSS Custom Properties
-   =========================== */
+
 :root {
     /* Colors - Light Mode */
     --bg-primary: #ffffff;
@@ -70,9 +68,7 @@
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
-/* ===========================
-   Base Styles
-   =========================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -99,9 +95,7 @@ body {
     padding: 0 var(--spacing-md);
 }
 
-/* ===========================
-   Navigation
-   =========================== */
+
 .navbar {
     position: fixed;
     top: 0;
