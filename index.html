@@ -11,33 +11,34 @@
     <title>Anand Harikrishnan - Software Engineer Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="game-theme">
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">Anand Harikrishnan</a>
+            <a href="#home" class="nav-logo">ANAND.HARIKRISHNAN</a>
             <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link">~</a></li>
+                <li><a href="#about" class="nav-link">about</a></li>
+                <li><a href="#experience" class="nav-link">experience</a></li>
+                <li><a href="#projects" class="nav-link">projects</a></li>
+                <li><a href="#education" class="nav-link">education</a></li>
+                <li><a href="#achievements" class="nav-link">achievements</a></li>
+                <li><a href="#skills" class="nav-link">skills</a></li>
+                <li><a href="#contact" class="nav-link">contact</a></li>
                 <li><a href="https://drive.google.com/file/d/1EfgqcQ5LvDPVSDM--KV9jugYTFZx6Nvv/view?usp=drive_link"
-                        class="btn btn-primary resume-btn-nav" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                        class="btn btn-primary resume-btn-nav" target="_blank" rel="noopener noreferrer">RESUME</a></li>
             </ul>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" style="display: none;">
                 <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="5"></circle>
@@ -58,27 +59,26 @@
         </div>
     </nav>
 
-    <section class="hero" id="home">
+    <section class="hero hero-game" id="home">
         <div class="hero-background">
             <div class="gradient-orb orb-1"></div>
             <div class="gradient-orb orb-2"></div>
             <div class="gradient-orb orb-3"></div>
         </div>
         <div class="container hero-content">
-            <div class="hero-text">
-                <p class="hero-greeting">Hi, I'm</p>
-                <h1 class="hero-title">Anand Harikrishnan</h1>
-                <p class="hero-subtitle">Software Engineer</p>
-                <p class="hero-description">
+            <div class="game-hero-inner hero-entrance">
+                <span class="game-level-badge">LEVEL 1</span>
+                <h1 class="hero-title game-hero-title">Anand Harikrishnan</h1>
+                <p class="game-hero-class">Software Engineer</p>
+                <p class="hero-description game-hero-desc">
                     Specializing in AI-powered systems, microservices architecture, and cloud deployment.
                     Passionate about building scalable solutions that solve real-world problems.
                 </p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View Projects</a>
-
+                <div class="game-xp-bar">
+                    <div class="game-xp-fill" style="width: 100%"></div>
+                    <span class="game-xp-label">2 Years Experience</span>
                 </div>
-                <div class="hero-social">
+                <div class="hero-social hero-social-top">
                     <a href="https://linkedin.com/in/anand-harikrishnan-04b2a5214/" target="_blank" rel="noopener noreferrer"
                         class="social-link" aria-label="LinkedIn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -104,17 +104,17 @@
                         </svg>
                     </a>
                 </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                </div>
             </div>
         </div>
-        <!-- <div class="scroll-indicator">
-            <span></span>
-        </div> -->
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title section-title-game section-title-centered">About Me</h2>
             <div class="about-content">
                 <div class="about-image">
                     <img src="assets/images/profile.png" alt="Anand Harikrishnan" class="profile-photo">
@@ -134,68 +134,13 @@
                     </p>
                 </div>
             </div>
-            <div class="education-cards same-line-grid">
-                <div class="education-card glass-card">
-                    <img src="assets/images/mec-logo.png" alt="Model Engineering College" class="school-logo">
-                    <h3>Bachelor of Technology</h3>
-                    <p class="education-field">Computer Science</p>
-                    <p class="education-institution">Model Engineering College</p>
-                    <p class="education-location">Kochi, India</p>
-                    <p class="education-date">Nov 2020 - June 2024</p>
-                </div>
-                <div class="education-card glass-card">
-                    <img src="assets/images/chavara-logo.png" alt="Chavara Public School" class="school-logo">
-                    <h3>Higher Secondary Education</h3>
-                    <p class="education-institution">Chavara Public School</p>
-                    <p class="education-location">Pala, India</p>
-                    <p class="education-date">June 2018 - June 2020</p>
-                </div>
-                <div class="education-card glass-card">
-                    <img src="assets/images/alphonsa-logo.png" alt="Alphonsa Residential School" class="school-logo">
-                    <h3>Primary Education</h3>
-                    <p class="education-institution">Alphonsa Residential School</p>
-                    <p class="education-location">Pala, India</p>
-                    <p class="education-date">2006 - 2018</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section class="achievements" id="achievements">
-        <div class="container">
-            <h2 class="section-title">Achievements</h2>
-            <div class="achievements-grid">
-                <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/" target="_blank"
-                    rel="noopener noreferrer" class="achievement-card glass-card">
-                    <img src="assets/images/aws-certification.png" alt="AWS Certified Cloud Practitioner"
-                        class="achievement-badge">
-                    <h3>AWS Certified Cloud Practitioner</h3>
-                    <p class="achievement-description">Amazon Web Services - Foundational Level Certification</p>
-                    <span class="achievement-link">View Credential →</span>
-                </a>
-                <a href="https://leetcode.com/u/anand170/" target="_blank" rel="noopener noreferrer"
-                    class="achievement-card glass-card">
-                    <img src="assets/images/leetcode-logo.png" alt="LeetCode Profile" class="achievement-badge">
-                    <h3>LeetCode Problem Solver</h3>
-                    <p class="achievement-description">200+ problems solved across various difficulty levels</p>
-                    <span class="achievement-link">View Profile →</span>
-                </a>
-                <a href="https://ieeexplore.ieee.org/document/11105358" target="_blank" rel="noopener noreferrer"
-                    class="achievement-card glass-card">
-                    <img src="assets/images/ieee-logo.png" alt="IEEE Publication" class="achievement-badge">
-                    <h3>IEEE Published Paper</h3>
-                    <p class="achievement-description">Research publication on microservices migration architecture</p>
-                    <span class="achievement-link">Read Paper →</span>
-                </a>
-            </div>
         </div>
     </section>
 
     <!-- Experience Section -->
     <section class="experience" id="experience">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title section-title-game section-title-centered">Professional Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
@@ -214,41 +159,26 @@
                             </div>
                         </div>
                         <ul class="timeline-achievements">
-                            <li>
-                                <span class="achievement-icon">🏗️</span>
-                                Architected and maintained the backend of an AI-powered Incident Management System built
+                            <li> Architected and maintained the backend of an AI-powered Incident Management System built
                                 on a
                                 FastAPI-based microservices architecture, integrating PostgreSQL, Redis, Qdrant, and
                                 Loki for
                                 data management, with Celery for background task processing and Google ADK agents for
                                 intelligent
-                                incident automation.
-                            </li>
-                            <li>
-                                <span class="achievement-icon">🔗</span>
-                                Worked on integrating GitHub, Jira, Slack, Azure DevOps, and Microsoft Teams using MCP
+                                incident automation.</li>
+                            <li> Worked on integrating GitHub, Jira, Slack, Azure DevOps, and Microsoft Teams using MCP
                                 and Rest
                                 APIs to import multi-platform incidents and enable resolution directly within
-                                communication platforms.
-                            </li>
-                            <li>
-                                <span class="achievement-icon">☁️</span>
-                                Obtained the AWS Certified Cloud Practitioner certification during tenure, improving
+                                communication platforms.</li>
+                            <li> Obtained the AWS Certified Cloud Practitioner certification during tenure, improving
                                 proficiency
-                                in system design and cloud deployment.
-                            </li>
-                            <li>
-                                <span class="achievement-icon">🚀</span>
-                                Handled the deployment of in-house products on AWS and implementation of CI/CD pipelines
+                                in system design and cloud deployment.</li>
+                            <li> Handled the deployment of in-house products on AWS and implementation of CI/CD pipelines
                                 to
-                                automate deployment processes and reduce release time by 40%.
-                            </li>
-                            <li>
-                                <span class="achievement-icon">📄</span>
-                                Migrated Inhabitr's monolithic Flask application deployed on EC2 to a FastAPI-based
+                                automate deployment processes and reduce release time by 40%.</li>
+                            <li> Migrated Inhabitr's monolithic Flask application deployed on EC2 to a FastAPI-based
                                 microservices
-                                architecture on AWS ECS, and published an IEEE paper based on the work.
-                            </li>
+                                architecture on AWS ECS, and published an IEEE paper based on the work.</li>
                         </ul>
                     </div>
                 </div>
@@ -259,7 +189,7 @@
     <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title section-title-game section-title-centered">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card glass-card">
                     <div class="project-header">
@@ -299,9 +229,9 @@
 
                 <div class="project-card glass-card">
                     <div class="project-header">
-                        <h3>DocuChat</h3>
+                        <h3>Pitchmate</h3>
                         <div class="project-links">
-                            <a href="https://github.com/anand176/DocuChat" target="_blank" rel="noopener noreferrer"
+                            <a href="https://github.com/anand176/Pitchmate" target="_blank" rel="noopener noreferrer"
                                 class="project-link" aria-label="View on GitHub">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -314,23 +244,19 @@
                         </div>
                     </div>
                     <p class="project-description">
-                        Developed an agentic AI-powered log monitoring assistant using FastAPI and React, leveraging Google ADK to
-orchestrate LLM agents that track, analyze, and resolve issues across multiple log sources.
+                        Built an agentic AI pitch co-pilot with FastAPI and React, using Google ADK to orchestrate LLM agents that help founders refine pitch decks, validate markets, prep for investor Q&A, and draft outreach.
                     </p>
                     <ul class="project-highlights">
-                        <li>Designed a centralized log ingestion and monitoring pipeline using Alloy, Loki, and Grafana for observability and
-diagnostics.</li>
-                        <li>Implemented knowledge base management with Pinecone, enabling add and delete operations using LLaMA-based
-embeddings for efficient semantic retrieval</li>
+                        <li>Designed a multi-agent system (market validation, GTM strategy, investor outreach, due diligence, deck creation, and diagram generation) with a single orchestrator that routes user intent and keeps conversation context across sessions.</li>
+                        <li>Implemented knowledge base and session context with Supabase (auth, pgvector) and in-memory session store; support for PDF/DOCX upload and semantic search so agents can review decks and answer from uploaded materials.</li>
                     </ul>
                     <div class="project-tech">
                         <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">ReactJS</span>
+                        <span class="tech-tag">React</span>
                         <span class="tech-tag">Google ADK</span>
-                        <span class="tech-tag">Loki</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Grafana</span>
-                        <span class="tech-tag">Pinecone</span>
+                        <span class="tech-tag">Supabase</span>
+                        <span class="tech-tag">pgvector</span>
+                        <span class="tech-tag">Vite</span>
                     </div>
                 </div>
 
@@ -372,10 +298,71 @@ embeddings for efficient semantic retrieval</li>
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title section-title-game section-title-centered">Education</h2>
+            <div class="education-cards same-line-grid">
+                <div class="education-card glass-card">
+                    <img src="assets/images/mec-logo.png" alt="Model Engineering College" class="school-logo">
+                    <h3>Bachelor of Technology in Computer Science</h3>
+                    <p class="education-institution">Model Engineering College</p>
+                    <p class="education-location">Kochi, India</p>
+                    <p class="education-date">Nov 2020 - June 2024</p>
+                </div>
+                <div class="education-card glass-card">
+                    <img src="assets/images/chavara-logo.png" alt="Chavara Public School" class="school-logo">
+                    <h3>Higher Secondary Education</h3>
+                    <p class="education-institution">Chavara Public School</p>
+                    <p class="education-location">Pala, India</p>
+                    <p class="education-date">June 2018 - June 2020</p>
+                </div>
+                <div class="education-card glass-card">
+                    <img src="assets/images/alphonsa-logo.png" alt="Alphonsa Residential School" class="school-logo">
+                    <h3>Primary Education</h3>
+                    <p class="education-institution">Alphonsa Residential School</p>
+                    <p class="education-location">Pala, India</p>
+                    <p class="education-date">2006 - 2018</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements" id="achievements">
+        <div class="container">
+            <h2 class="section-title section-title-game section-title-centered">Achievements</h2>
+            <div class="achievements-grid">
+                <a href="https://www.credly.com/badges/ee64f694-de7a-43b6-b295-b0f16c26b4ee/public_url" target="_blank"
+                    rel="noopener noreferrer" class="achievement-card glass-card">
+                    <img src="assets/images/aws-certification.png" alt="AWS Certified Cloud Practitioner"
+                        class="achievement-badge">
+                    <h3>AWS Certified Cloud Practitioner</h3>
+                    <p class="achievement-description">Amazon Web Services - Foundational Level Certification</p>
+                    <span class="achievement-link">View Credential →</span>
+                </a>
+                <a href="https://leetcode.com/u/anand170/" target="_blank" rel="noopener noreferrer"
+                    class="achievement-card glass-card">
+                    <img src="assets/images/leetcode-logo.png" alt="LeetCode Profile" class="achievement-badge">
+                    <h3>LeetCode Problem Solver</h3>
+                    <p class="achievement-description">200+ problems solved across various difficulty levels</p>
+                    <span class="achievement-link">View Profile →</span>
+                </a>
+                <a href="https://ieeexplore.ieee.org/document/11105358" target="_blank" rel="noopener noreferrer"
+                    class="achievement-card glass-card">
+                    <img src="ieee_image.jpg" alt="IEEE Publication" class="achievement-badge">
+                    <h3>IEEE Published Paper</h3>
+                    <p class="achievement-description">Research publication on microservices migration architecture</p>
+                    <span class="achievement-link">Read Paper →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section class="skills" id="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title section-title-game section-title-centered">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category glass-card">
                     <h3>Languages</h3>
@@ -429,7 +416,7 @@ embeddings for efficient semantic retrieval</li>
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title section-title-game section-title-centered">Get In Touch</h2>
             <div class="contact-content">
                 <p class="contact-intro">
                     I'm always open to discussing new opportunities, collaborations, or just having a chat about
@@ -495,8 +482,8 @@ embeddings for efficient semantic retrieval</li>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Anand Harikrishnan. All rights reserved.</p>
-            <p class="footer-tagline">Built with passion and precision</p>
+            <p class="footer-game-tag">Continue? — Built with passion and precision</p>
+            <p class="footer-copy">&copy; 2026 Anand Harikrishnan. All rights reserved.</p>
         </div>
     </footer>
 

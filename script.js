@@ -4,17 +4,21 @@
 const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 
-// Check for saved theme preference or default to 'dark'
-const currentTheme = localStorage.getItem('theme') || 'dark';
-html.setAttribute('data-theme', currentTheme);
-
-themeToggle.addEventListener('click', () => {
-    const theme = html.getAttribute('data-theme');
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-});
+// Game theme: always dark
+if (document.body.classList.contains('game-theme')) {
+    html.setAttribute('data-theme', 'dark');
+} else {
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', currentTheme);
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const theme = html.getAttribute('data-theme');
+            const newTheme = theme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    }
+}
 
 // ===========================
 // Mobile Menu
@@ -136,25 +140,6 @@ if (footerYear) {
 }
 
 // ===========================
-// Typing Effect for Hero Subtitle (Optional Enhancement)
-// ===========================
-const heroSubtitle = document.querySelector('.hero-subtitle');
-const subtitleText = heroSubtitle.textContent;
-let charIndex = 0;
-
-function typeWriter() {
-    if (charIndex < subtitleText.length) {
-        heroSubtitle.textContent = subtitleText.substring(0, charIndex + 1);
-        charIndex++;
-        setTimeout(typeWriter, 100);
-    }
-}
-
-// Uncomment to enable typing effect
-// heroSubtitle.textContent = '';
-// setTimeout(typeWriter, 1000);
-
-// ===========================
 // Parallax Effect for Hero Orbs
 // ===========================
 const orbs = document.querySelectorAll('.gradient-orb');
@@ -203,5 +188,5 @@ if (prefersReducedMotion.matches) {
 // ===========================
 // Console Message
 // ===========================
-console.log('%c👋 Welcome to my portfolio!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
-console.log('%cInterested in the code? Check out the repository!', 'font-size: 14px; color: #8b5cf6;');
+console.log('%c🎮 Welcome to my portfolio!', 'font-size: 20px; font-weight: bold; color: #f59e0b;');
+console.log('%cLevel up your team — check out the code!', 'font-size: 14px; color: #fbbf24;');
