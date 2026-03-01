@@ -1154,21 +1154,39 @@ section {
 }
 
 .project-link {
-    width: 36px;
+    min-width: 36px;
     height: 36px;
+    padding: 0 10px;
     border-radius: var(--radius-md);
     background: var(--bg-secondary);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 6px;
     color: var(--text-primary);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
     transition: all var(--transition-base);
 }
 
 .project-link:hover {
     background: var(--accent-gradient);
     color: white;
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.project-link-text {
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: opacity 0.25s ease, max-width 0.25s ease;
+}
+
+.project-card:hover .project-link-text {
+    opacity: 1;
+    max-width: 120px;
 }
 
 .project-description {
