@@ -111,6 +111,8 @@ body.game-theme {
 .game-hero-inner {
     max-width: 700px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 /* Hero entrance animation */
@@ -635,12 +637,12 @@ body {
 .btn-primary {
     background: var(--accent-gradient);
     color: white;
-    box-shadow: var(--shadow-glow);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 60px var(--accent-glow);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
 }
 
 .btn-secondary {
@@ -1128,12 +1130,105 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: var(--spacing-md);
+    position: relative;
+    z-index: 1;
 }
 
 .project-card {
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), transparent 40%, rgba(56, 189, 248, 0.08));
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    pointer-events: none;
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1.25rem;
+    width: 72px;
+    height: 2px;
+    background: var(--accent-gradient);
+    box-shadow: 0 0 20px var(--accent-glow);
+    transition: width var(--transition-base), opacity var(--transition-base);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-card:hover::after {
+    width: 120px;
+    opacity: 1;
+}
+
+.project-image {
+    position: relative;
+    margin-bottom: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    background: rgba(0, 0, 0, 0.2);
+    aspect-ratio: 16 / 9;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.project-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 20%, rgba(255, 255, 255, 0.14) 45%, transparent 70%);
+    transform: translateX(-140%);
+    transition: transform 0.8s ease;
+    pointer-events: none;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-base), filter var(--transition-base);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+    filter: saturate(1.08) brightness(1.04);
+}
+
+.project-card:hover .project-image::after {
+    transform: translateX(140%);
+}
+
+body.game-theme .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 0 34px rgba(245, 158, 11, 0.22);
+}
+
+.projects-grid .project-card.fade-in:nth-child(1) {
+    transition-delay: 0.08s;
+}
+
+.projects-grid .project-card.fade-in:nth-child(2) {
+    transition-delay: 0.18s;
+}
+
+.projects-grid .project-card.fade-in:nth-child(3) {
+    transition-delay: 0.28s;
 }
 
 .project-header {
@@ -1462,6 +1557,10 @@ section {
     .same-line-grid {
         grid-template-columns: 1fr !important;
     }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1477,6 +1576,10 @@ section {
     .section-title {
         font-size: var(--font-size-2xl);
     }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ===========================
@@ -1491,6 +1594,16 @@ section {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-card::before,
+    .project-card::after,
+    .project-image::after,
+    .project-image img,
+    .project-card {
+        transition: none;
+    }
 }
 
 /* ===========================
