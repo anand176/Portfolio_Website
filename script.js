@@ -1,36 +1,4 @@
 // =============================================
-// Custom Cursor
-// =============================================
-const cursor    = document.getElementById('cursor');
-const cursorDot = document.getElementById('cursor-dot');
-
-let mouseX = -100, mouseY = -100;
-let dotX   = -100, dotY   = -100;
-
-document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  cursorDot.style.left = mouseX + 'px';
-  cursorDot.style.top  = mouseY + 'px';
-});
-
-function animateCursor() {
-  dotX += (mouseX - dotX) * 0.12;
-  dotY += (mouseY - dotY) * 0.12;
-  if (cursor) {
-    cursor.style.left = dotX + 'px';
-    cursor.style.top  = dotY + 'px';
-  }
-  requestAnimationFrame(animateCursor);
-}
-animateCursor();
-
-document.querySelectorAll('a, button, .neo-card, .skill-tag, .tag-neo, .tech-pill, .project-card').forEach(el => {
-  el.addEventListener('mouseenter', () => cursor && cursor.classList.add('hovered'));
-  el.addEventListener('mouseleave', () => cursor && cursor.classList.remove('hovered'));
-});
-
-// =============================================
 // Mobile Menu
 // =============================================
 const menuToggle = document.getElementById('mobile-menu-toggle');

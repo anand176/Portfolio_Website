@@ -26,56 +26,19 @@
    ============================================= */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; cursor: auto; }
 
 body {
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--black);
   overflow-x: hidden;
-  cursor: none;
 }
 
 a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; }
 ul { list-style: none; }
 
-/* =============================================
-   Custom Cursor
-   ============================================= */
-.cursor {
-  width: 36px;
-  height: 36px;
-  border: 2.5px solid var(--black);
-  background: transparent;
-  border-radius: 0;
-  position: fixed;
-  top: 0; left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, background 0.2s, border-color 0.2s;
-  mix-blend-mode: difference;
-}
-
-.cursor-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--yellow);
-  position: fixed;
-  top: 0; left: 0;
-  pointer-events: none;
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-  transition: none;
-}
-
-.cursor.hovered {
-  width: 60px;
-  height: 60px;
-  background: rgba(255, 214, 10, 0.15);
-  border-color: var(--yellow);
-}
 
 /* =============================================
    Layout
@@ -331,7 +294,7 @@ ul { list-style: none; }
   border: var(--border);
   transition: transform 0.1s, box-shadow 0.1s;
   display: inline-block;
-  cursor: none;
+  cursor: pointer;
 }
 
 .btn-black {
@@ -376,7 +339,7 @@ ul { list-style: none; }
   letter-spacing: 0.05em;
   box-shadow: var(--shadow-sm);
   transition: transform 0.1s, box-shadow 0.1s, background 0.1s;
-  cursor: none;
+  cursor: pointer;
 }
 
 .social-neo:hover {
@@ -753,7 +716,7 @@ ul { list-style: none; }
   box-shadow: 2px 2px 0 var(--black);
   transition: transform 0.1s, box-shadow 0.1s;
   flex-shrink: 0;
-  cursor: none;
+  cursor: pointer;
 }
 
 .project-gh-btn:hover {
@@ -1041,7 +1004,7 @@ ul { list-style: none; }
   border: 3px solid var(--black);
   box-shadow: 8px 8px 0 var(--black);
   transition: transform 0.1s, box-shadow 0.1s;
-  cursor: none;
+  cursor: pointer;
 }
 
 .resume-big-btn:hover {
@@ -1081,7 +1044,7 @@ ul { list-style: none; }
   justify-content: center;
   overflow: hidden;
   transition: border-color 0.15s, transform 0.1s, box-shadow 0.1s;
-  cursor: none;
+  cursor: pointer;
 }
 
 .footer-social-icon img {
@@ -1171,7 +1134,22 @@ ul { list-style: none; }
   .skills-grid   { grid-template-columns: 1fr; }
 
   .contact-links-grid { grid-template-columns: 1fr; }
-  .contact-inner { padding: 2.5rem 1.5rem; }
+  .contact-inner {
+    padding: 2rem 1.25rem;
+    overflow: hidden;
+  }
+  .contact-link-btn {
+    box-shadow: 3px 3px 0 var(--black);
+    font-size: 0.72rem;
+    word-break: break-all;
+  }
+  .resume-big-btn {
+    font-size: 1.2rem;
+    padding: 0.9rem 1.5rem;
+    box-shadow: 4px 4px 0 var(--black);
+    width: 100%;
+    text-align: center;
+  }
   .float-label { display: none; }
 }
 
@@ -1211,7 +1189,4 @@ ul { list-style: none; }
   .float-label { animation: none; }
   .marquee-inner { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .cursor, .cursor-dot { display: none; }
-  body { cursor: auto; }
-  html { cursor: auto; }
 }
