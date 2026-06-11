@@ -1,192 +1,221 @@
-// ===========================
-// Theme Management
-// ===========================
-const themeToggle = document.getElementById('theme-toggle');
-const html = document.documentElement;
+// =============================================
+// Custom Cursor
+// =============================================
+const cursor    = document.getElementById('cursor');
+const cursorDot = document.getElementById('cursor-dot');
 
-// Game theme: always dark
-if (document.body.classList.contains('game-theme')) {
-    html.setAttribute('data-theme', 'dark');
-} else {
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    html.setAttribute('data-theme', currentTheme);
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const theme = html.getAttribute('data-theme');
-            const newTheme = theme === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        });
-    }
+let mouseX = -100, mouseY = -100;
+let dotX   = -100, dotY   = -100;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cursorDot.style.left = mouseX + 'px';
+  cursorDot.style.top  = mouseY + 'px';
+});
+
+function animateCursor() {
+  dotX += (mouseX - dotX) * 0.12;
+  dotY += (mouseY - dotY) * 0.12;
+  if (cursor) {
+    cursor.style.left = dotX + 'px';
+    cursor.style.top  = dotY + 'px';
+  }
+  requestAnimationFrame(animateCursor);
 }
+animateCursor();
 
-// ===========================
+document.querySelectorAll('a, button, .neo-card, .skill-tag, .tag-neo, .tech-pill, .project-card').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor && cursor.classList.add('hovered'));
+  el.addEventListener('mouseleave', () => cursor && cursor.classList.remove('hovered'));
+});
+
+// =============================================
 // Mobile Menu
-// ===========================
-const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-const navMenu = document.getElementById('nav-menu');
+// =============================================
+const menuToggle = document.getElementById('mobile-menu-toggle');
+const navMenu    = document.getElementById('nav-menu');
 
-mobileMenuToggle.addEventListener('click', () => {
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
-    mobileMenuToggle.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
+}
+
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    if (menuToggle) menuToggle.classList.remove('active');
+  });
 });
 
-// Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
-    });
-});
-
-// ===========================
-// Smooth Scrolling
-// ===========================
+// =============================================
+// Smooth Scroll
+// =============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        
-        if (target) {
-            const navbarHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPosition = target.offsetTop - navbarHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// ===========================
-// Navbar Scroll Effect
-// ===========================
-const navbar = document.getElementById('navbar');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+  anchor.addEventListener('click', (e) => {
+    const href = anchor.getAttribute('href');
+    if (href === '#') return;
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      const navH = document.querySelector('.navbar').offsetHeight;
+      window.scrollTo({ top: target.offsetTop - navH, behavior: 'smooth' });
     }
-    
-    lastScroll = currentScroll;
+  });
 });
 
-// ===========================
-// Intersection Observer for Animations
-// ===========================
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+// =============================================
+// Scroll Reveal
+// =============================================
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, observerOptions);
-
-// Observe all sections and cards
-const animatedElements = document.querySelectorAll(
-    'section, .glass-card, .timeline-item, .project-card, .skill-category'
-);
-
-animatedElements.forEach(el => {
-    el.classList.add('fade-in');
-    observer.observe(el);
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  el.style.transitionDelay = (i % 4) * 0.1 + 's';
+  revealObs.observe(el);
 });
 
-// ===========================
-// Active Navigation Link
-// ===========================
+// Stagger siblings within the same grid parent
+const staggerObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const parent   = entry.target.closest('.projects-grid, .skills-grid, .achieve-col');
+      const siblings = parent ? parent.querySelectorAll('.reveal') : [entry.target];
+      siblings.forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 120);
+      });
+      staggerObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.05 });
+
+document.querySelectorAll(
+  '.projects-grid .project-card, .skills-grid .skill-block, .achieve-col .achieve-card'
+).forEach(el => staggerObs.observe(el));
+
+// =============================================
+// Active Nav Link on Scroll
+// =============================================
 const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
 
-function updateActiveNavLink() {
-    const scrollPosition = window.pageYOffset + 100;
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
-        
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
-                }
-            });
+function updateActiveNav() {
+  const scrollPos = window.pageYOffset + 130;
+  sections.forEach(section => {
+    if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + section.id) {
+          link.classList.add('active');
         }
-    });
+      });
+    }
+  });
 }
 
-window.addEventListener('scroll', updateActiveNavLink);
+window.addEventListener('scroll', updateActiveNav, { passive: true });
 
-// ===========================
-// Dynamic Year in Footer
-// ===========================
-const currentYear = new Date().getFullYear();
-const footerYear = document.querySelector('.footer p');
-if (footerYear) {
-    footerYear.innerHTML = footerYear.innerHTML.replace('2026', currentYear);
+// =============================================
+// Marquee — pause on hover
+// =============================================
+const marqueeInner = document.querySelector('.marquee-inner');
+const marqueeStrip = document.querySelector('.marquee-strip');
+
+if (marqueeStrip && marqueeInner) {
+  marqueeStrip.addEventListener('mouseenter', () => {
+    marqueeInner.style.animationPlayState = 'paused';
+  });
+  marqueeStrip.addEventListener('mouseleave', () => {
+    marqueeInner.style.animationPlayState = 'running';
+  });
 }
 
-// ===========================
-// Parallax Effect for Hero Orbs
-// ===========================
-const orbs = document.querySelectorAll('.gradient-orb');
-
-window.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX / window.innerWidth;
-    const mouseY = e.clientY / window.innerHeight;
-    
-    orbs.forEach((orb, index) => {
-        const speed = (index + 1) * 20;
-        const x = (mouseX - 0.5) * speed;
-        const y = (mouseY - 0.5) * speed;
-        
-        orb.style.transform = `translate(${x}px, ${y}px)`;
+// =============================================
+// Glitch — trigger on hover for the title
+// =============================================
+document.querySelectorAll('.glitch').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    el.style.animation = 'none';
+    el.querySelectorAll('::before, ::after');
+    requestAnimationFrame(() => {
+      el.style.animation = '';
     });
+  });
 });
 
-// ===========================
-// Project Links - Prevent Default (Update with actual URLs)
-// ===========================
-const projectLinks = document.querySelectorAll('.project-link');
-projectLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        // Update the href attributes in HTML with actual project URLs
-        // For now, this prevents the default # behavior
-        if (link.getAttribute('href') === '#') {
-            e.preventDefault();
-            console.log('Add your project URL here');
-        }
-    });
-});
-
-// ===========================
-// Performance: Reduce Motion for Users Who Prefer It
-// ===========================
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-if (prefersReducedMotion.matches) {
-    // Disable animations for users who prefer reduced motion
-    document.querySelectorAll('.fade-in').forEach(el => {
-        el.classList.add('visible');
-        el.style.transition = 'none';
-    });
+// =============================================
+// Counter animation for stat numbers
+// =============================================
+function animateCounter(el, target, suffix = '') {
+  let start = 0;
+  const duration = 1200;
+  const step = (timestamp) => {
+    if (!start) start = timestamp;
+    const progress = Math.min((timestamp - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
 }
 
-// ===========================
-// Console Message
-// ===========================
-console.log('%c🎮 Welcome to my portfolio!', 'font-size: 20px; font-weight: bold; color: #f59e0b;');
-console.log('%cLevel up your team — check out the code!', 'font-size: 14px; color: #fbbf24;');
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const raw = el.dataset.target;
+      if (raw) {
+        const num    = parseInt(raw);
+        const suffix = raw.replace(num.toString(), '');
+        animateCounter(el, num, suffix);
+      }
+      statObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-num, .stat-num').forEach(el => {
+  const text = el.textContent.trim();
+  el.dataset.target = text;
+  el.textContent = '0' + (text.includes('+') ? '+' : '');
+  statObs.observe(el);
+});
+
+// =============================================
+// Project card tilt on mouse move
+// =============================================
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect  = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width  - 0.5;
+    const y = (e.clientY - rect.top)  / rect.height - 0.5;
+    card.style.transform = `translate(4px, 4px) rotateY(${x * 4}deg) rotateX(${-y * 4}deg)`;
+    card.style.boxShadow = '2px 2px 0 #0a0a0a';
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+    card.style.boxShadow = '';
+  });
+});
+
+// =============================================
+// Footer year
+// =============================================
+const yearEl = document.querySelector('.footer-copy');
+if (yearEl) {
+  yearEl.textContent = yearEl.textContent.replace('2026', new Date().getFullYear());
+}
+
+// =============================================
+// Console Easter egg
+// =============================================
+console.log('%c AH_ ', 'font-size:28px; font-weight:900; background:#FFD60A; color:#0a0a0a; padding:4px 8px;');
+console.log('%c github.com/anand176 ', 'font-size:13px; font-family:monospace; color:#FFD60A; background:#0a0a0a; padding:2px 6px;');

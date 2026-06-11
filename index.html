@@ -1,506 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Anand Harikrishnan - Software Engineer specializing in AI-powered systems, microservices architecture, and cloud deployment. View my portfolio of projects and experience.">
-    <meta name="keywords" content="Software Engineer, Python, FastAPI, AWS, Machine Learning, Full Stack Developer">
-    <meta name="author" content="Anand Harikrishnan">
-    <title>Anand Harikrishnan - Software Engineer Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anand Harikrishnan — Software Engineer. AI/ML systems, microservices, cloud." />
+  <meta name="keywords" content="Software Engineer, Python, FastAPI, AWS, Machine Learning, Full Stack Developer" />
+  <meta name="author" content="Anand Harikrishnan" />
+  <title>Anand Harikrishnan — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
 
-<body class="game-theme">
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">ANAND.HARIKRISHNAN</a>
-            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">~</a></li>
-                <li><a href="#about" class="nav-link">about</a></li>
-                <li><a href="#experience" class="nav-link">experience</a></li>
-                <li><a href="#projects" class="nav-link">projects</a></li>
-                <li><a href="#education" class="nav-link">education</a></li>
-                <li><a href="#achievements" class="nav-link">achievements</a></li>
-                <li><a href="#skills" class="nav-link">skills</a></li>
-                <li><a href="#contact" class="nav-link">contact</a></li>
-                <li><a href="https://drive.google.com/file/d/1rq3nNlnnjf8qZIFbZS3gvKjKyRgv33cS/view?usp=drive_link"
-                        class="btn btn-primary resume-btn-nav" target="_blank" rel="noopener noreferrer">RESUME</a></li>
-            </ul>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" style="display: none;">
-                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-            </button>
-        </div>
-    </nav>
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
 
-    <section class="hero hero-game" id="home">
-        <div class="hero-background">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">AH_</a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link">about</a></li>
+        <li><a href="#experience" class="nav-link">experience</a></li>
+        <li><a href="#projects" class="nav-link">projects</a></li>
+        <li><a href="#skills" class="nav-link">skills</a></li>
+        <li><a href="#education" class="nav-link">education</a></li>
+        <li><a href="#contact" class="nav-link">contact</a></li>
+        <li>
+          <a href="https://drive.google.com/file/d/1dj5Hz4Y1Dc6NU32wV5x3Aki4oWCXod_h/view?usp=drive_link"
+             class="nav-resume-btn" target="_blank" rel="noopener noreferrer">RESUME ↗</a>
+        </li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg-block"></div>
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">SOFTWARE ENGINEER // KOCHI, INDIA</div>
+        <h1 class="hero-title">
+          <span class="glitch" data-text="ANAND">ANAND</span><br />
+          <span class="glitch" data-text="HARIKRISHNAN">HARIKRISHNAN</span>
+        </h1>
+        <p class="hero-sub">Full-stack ML/AI engineer. I build production-grade LLM systems, microservices, and things that actually ship.</p>
+        <div class="hero-cta-row">
+          <a href="#projects" class="btn-neo btn-black">VIEW PROJECTS ↓</a>
+          <a href="https://github.com/anand176" target="_blank" rel="noopener noreferrer" class="btn-neo btn-yellow">GITHUB ↗</a>
         </div>
-        <div class="container hero-content">
-            <div class="game-hero-inner hero-entrance">
-                <span class="game-level-badge">LEVEL 1</span>
-                <h1 class="hero-title game-hero-title">Anand Harikrishnan</h1>
-                <p class="game-hero-class">Software Engineer</p>
-                <p class="hero-description game-hero-desc">
-                    Full-stack ML/AI engineer specializing in building and deploying production-grade LLM-powered systems and
-machine learning solutions.
-                    Passionate about building scalable solutions that solve real-world problems.
-                </p>
-                <div class="game-xp-bar">
-                    <div class="game-xp-fill" style="width: 100%"></div>
-                    <span class="game-xp-label">2+ Years Experience</span>
-                </div>
-                <div class="hero-social hero-social-top">
-                    <a href="https://linkedin.com/in/anand-harikrishnan-04b2a5214/" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                    </a>
-                    <a href="https://github.com/anand176" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                    </a>
-                    <a href="mailto:anandharikrishnan14@gmail.com" class="social-link" aria-label="Email">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </a>
-                </div>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                </div>
+        <div class="hero-social-row">
+          <a href="https://linkedin.com/in/anand-harikrishnan-04b2a5214/" target="_blank" rel="noopener noreferrer" class="social-neo" title="LinkedIn">
+            <img src="logo/linkedin-real.jpg" alt="LinkedIn" class="social-logo-img" />
+          </a>
+          <a href="https://github.com/anand176" target="_blank" rel="noopener noreferrer" class="social-neo" title="GitHub">
+            <img src="logo/github-logo.jpg" alt="GitHub" class="social-logo-img" />
+          </a>
+          <a href="mailto:anandharikrishnan14@gmail.com" class="social-neo" title="Email">
+            <img src="logo/gmail-logo.jpg" alt="Email" class="social-logo-img" />
+          </a>
+          <a href="tel:+919656681806" class="social-neo" title="Phone">
+            <img src="logo/phone-logo.jpg" alt="Phone" class="social-logo-img" />
+          </a>
+          <a href="https://www.instagram.com/a_n__a_n_d__?igsh=Ym50MDJnZWtkbWJt" target="_blank" rel="noopener noreferrer" class="social-neo" title="Instagram">
+            <img src="logo/insta-logo.jpg" alt="Instagram" class="social-logo-img" />
+          </a>
+        </div>
+      </div>
+      <div class="hero-stats-col">
+        <div class="hero-stat-box neo-box-pink">
+          <div class="stat-num">2+</div>
+          <div class="stat-lbl">YRS EXP</div>
+        </div>
+        <div class="hero-stat-box neo-box-blue">
+          <div class="stat-num">10K+</div>
+          <div class="stat-lbl">VISITORS</div>
+        </div>
+        <div class="hero-stat-box neo-box-green">
+          <div class="stat-num">200+</div>
+          <div class="stat-lbl">LEETCODE</div>
+        </div>
+        <div class="hero-stat-box neo-box-yellow">
+          <div class="stat-num">3+</div>
+          <div class="stat-lbl">ENTERPRISE</div>
+        </div>
+      </div>
+    </div>
+    <div class="float-label float-1">FastAPI</div>
+    <div class="float-label float-2">AWS ☁</div>
+    <div class="float-label float-3">LLM / AI</div>
+    <div class="float-label float-4">React</div>
+    <div class="float-label float-5">Python 🐍</div>
+    <div class="float-label float-6">Docker 🐳</div>
+    <div class="float-label float-7">Kafka</div>
+    <div class="float-label float-8">Next.js</div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-strip">
+    <div class="marquee-inner">
+      <span>Python ✦ FastAPI ✦ React ✦ AWS ✦ Docker ✦ TypeScript ✦ Spring Boot ✦ Kafka ✦ Redis ✦ LLM Agents ✦ Next.js ✦ Grafana ✦ Celery ✦ PostgreSQL ✦ MongoDB ✦ TensorFlow ✦ Pinecone ✦ Supabase ✦ </span>
+      <span>Python ✦ FastAPI ✦ React ✦ AWS ✦ Docker ✦ TypeScript ✦ Spring Boot ✦ Kafka ✦ Redis ✦ LLM Agents ✦ Next.js ✦ Grafana ✦ Celery ✦ PostgreSQL ✦ MongoDB ✦ TensorFlow ✦ Pinecone ✦ Supabase ✦ </span>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="about section-pad" id="about">
+    <div class="container">
+      <div class="section-label">01 — ABOUT</div>
+      <div class="about-grid">
+        <div class="about-photo-col">
+          <div class="about-photo-wrap neo-card neo-card-yellow reveal">
+            <img src="profile.png" alt="Anand Harikrishnan" class="about-photo" />
+          </div>
+        </div>
+        <div class="about-text-col reveal">
+          <h2 class="section-title">I BUILD THINGS THAT WORK AT SCALE.</h2>
+          <p class="about-p">I'm a full-stack engineer who ships AI products and fixes infrastructure disasters before they happen. Built incident management platforms for enterprises, developed AI tools that make HR teams happy, and optimized systems so hard they gained 35% performance just from feeling the pressure.</p>
+          <p class="about-p">Also I have opinions about microservices architecture and I'm not afraid to use them.</p>
+          <div class="about-tags">
+            <span class="tag-neo">Backend Architecture</span>
+            <span class="tag-neo">LLM Systems</span>
+            <span class="tag-neo">Cloud Deployment</span>
+            <span class="tag-neo">Multi-Agent AI</span>
+            <span class="tag-neo">Observability</span>
+            <span class="tag-neo">CI/CD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience section-pad" id="experience">
+    <div class="container">
+      <div class="section-label">02 — EXPERIENCE</div>
+      <h2 class="section-title">WHERE I'VE WORKED.</h2>
+      <div class="exp-card neo-card neo-card-yellow reveal">
+        <div class="exp-header">
+          <div class="exp-left">
+            <img src="assets/images/abilytics-logo.png" alt="Abilytics" class="exp-logo" />
+            <div>
+              <h3 class="exp-role">Software Engineer</h3>
+              <p class="exp-company">Abilytics, Inc.</p>
             </div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-badge">June 2024 — Present</span>
+            <span class="exp-badge exp-badge-outline">Kochi, India</span>
+          </div>
         </div>
-    </section>
+        <ul class="exp-bullets">
+          <li>Built an incident management platform (used by 3+ enterprise clients) with FastAPI, React, Celery, and Redis — integrating ticketing systems, multi-cloud observability (AWS/Azure/GCP), and CI/CD pipelines with multi-agent RAG for root cause analysis, SRE query resolution, and automated post-incident reporting.</li>
+          <li>Delivered a client-facing EDI Gateway using <strong>Spring Boot</strong>, Apache Camel, and Smooks for standardized B2B transaction processing, with RBAC via Keycloak and a React dashboard for real-time transaction tracking.</li>
+          <li>Shipped <strong>FormatIQ</strong>, an AI resume reformatting tool adopted by HR teams at multiple companies, using AWS Bedrock-powered LLM parsing to restructure content against user-provided templates — deployed on AWS Lambda + S3 with Cognito authentication.</li>
+          <li>Boosted client-facing AI inference by <strong>35%</strong> for ESRGAN and YOLO models by migrating from EC2/Flask to ECS/FastAPI microservices and set up observability (Prometheus, Grafana, Loki).</li>
+          <li>Developed <strong>Abilytics Studios</strong>, a product website using Next.js and Cloudflare — reached <strong>10K visitors</strong> within the first month of launch.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title section-title-game section-title-centered">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="assets/images/profile.png" alt="Anand Harikrishnan" class="profile-photo">
-                </div>
-                <div class="about-text">
-                    <p>
-                        I'm a Software Engineer at Abilytics Inc with a passion for building intelligent, scalable
-                        systems.
-                        With expertise in backend development, cloud architecture, and machine learning, I specialize in
-                        creating AI-powered solutions that drive real business value.
-                    </p>
-                    <p>
-                        My experience spans architecting microservices, integrating multi-platform APIs, and deploying
-                        production systems on AWS. I hold a Bachelor of Technology in Computer Science from Model
-                        Engineering
-                        College and am AWS Certified Cloud Practitioner.
-                    </p>
-                </div>
+  <!-- Projects -->
+  <section class="projects section-pad" id="projects">
+    <div class="container">
+      <div class="section-label">03 — PROJECTS</div>
+      <h2 class="section-title">THINGS I'VE BUILT.</h2>
+      <div class="projects-grid">
+
+        <!-- Observe India -->
+        <div class="project-card reveal" data-color="#1C6BFF">
+          <div class="project-color-bar" style="background:#1C6BFF"></div>
+          <div class="project-card-inner">
+            <div class="project-header-row">
+              <h3 class="project-name">Observe India</h3>
+              <div class="project-btns">
+                <span class="project-visitors-badge">5K+ visitors</span>
+                <a href="https://github.com/anand176" target="_blank" rel="noopener noreferrer" class="project-gh-btn">↗ LIVE</a>
+              </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="experience" id="experience">
-        <div class="container">
-            <h2 class="section-title section-title-game section-title-centered">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <div class="company-info">
-                                <img src="assets/images/abilytics-logo.png" alt="Abilytics Inc" class="company-logo">
-                                <div>
-                                    <h3>Software Engineer</h3>
-                                    <p class="company">Abilytics Inc</p>
-                                </div>
-                            </div>
-                            <div class="timeline-meta">
-                                <span class="location">Kochi</span>
-                                <span class="date">June 2024 - Present</span>
-                            </div>
-                        </div>
-                        <ul class="timeline-achievements">
-                            <li> Architected and maintained the backend of an AI-powered Incident Management System built
-                                on a
-                                FastAPI-based microservices architecture, integrating PostgreSQL, Redis, Qdrant, and
-                                Loki for
-                                data management, with Celery for background task processing and Google ADK agents for
-                                intelligent
-                                incident automation.</li>
-                            <li> Worked on integrating GitHub, Jira, Slack, Azure DevOps, and Microsoft Teams using MCP
-                                and Rest
-                                APIs to import multi-platform incidents and enable resolution directly within
-                                communication platforms.</li>
-                            <li> Obtained the AWS Certified Cloud Practitioner certification during tenure, improving
-                                proficiency
-                                in system design and cloud deployment.</li>
-                            <li> Handled the deployment of in-house products on AWS and implementation of CI/CD pipelines
-                                to
-                                automate deployment processes and reduce release time by 40%.</li>
-                            <li> Migrated Inhabitr's monolithic Flask application deployed on EC2 to a FastAPI-based
-                                microservices
-                                architecture on AWS ECS, and published an IEEE paper based on the work.</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="project-image-wrap">
+              <img src="observe-india.png" alt="Observe India" class="project-img" />
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title section-title-game section-title-centered">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card glass-card">
-                    <div class="project-header">
-                        <h3>SentinelAI</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/anand176/Sentinel_AI" target="_blank" rel="noopener noreferrer"
-                                class="project-link" aria-label="View on GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                    </path>
-                                </svg>
-                                <span class="project-link-text">View project</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="port-1.png" alt="SentinelAI project screenshot">
-                    </div>
-                    <p class="project-description">
-                        A full-stack video anomaly detection and narration platform to automatically identify and
-                        generate text descriptions of anomalous events from uploaded videos.
-                    </p>
-                    <ul class="project-highlights">
-                        <li>Created a custom autoencoder model and LSTM using Convolutional Neural Networks (CNN) with
-                            hyperparameter tuning</li>
-                        <li>Conducted comparative analysis between Autoencoder (unsupervised) and LSTM (supervised)
-                            models</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">CNN</span>
-                        <span class="tech-tag">AWS EC2</span>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card">
-                    <div class="project-header">
-                        <h3>Pitchmate</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/anand176/Pitchmate" target="_blank" rel="noopener noreferrer"
-                                class="project-link" aria-label="View on GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                    </path>
-                                </svg>
-                                <span class="project-link-text">View project</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="port3.png" alt="Pitchmate project screenshot">
-                    </div>
-                    <p class="project-description">
-                        An agentic AI pitch co-pilot with FastAPI and React, using Google ADK to orchestrate LLM agents that help founders refine pitch decks, validate markets, prep for investor Q&A, and draft outreach.
-                    </p>
-                    <ul class="project-highlights">
-                        <li>Designed a multi-agent system (market validation, GTM strategy, investor outreach, due diligence, deck creation, and diagram generation) with a single orchestrator that routes user intent and keeps conversation context across sessions.</li>
-                        <li>Implemented knowledge base and session context with Supabase (auth, pgvector) and in-memory session store; support for PDF/DOCX upload and semantic search so agents can review decks and answer from uploaded materials.</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Google ADK</span>
-                        <span class="tech-tag">Supabase</span>
-                        <span class="tech-tag">pgvector</span>
-                        <span class="tech-tag">Vite</span>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card">
-                    <div class="project-header">
-                        <h3>AssignEase</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/anand176/assignease-frontendApp" target="_blank"
-                                rel="noopener noreferrer" class="project-link" aria-label="View on GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                    </path>
-                                </svg>
-                                <span class="project-link-text">View project</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="port5.png" alt="AssignEase project screenshot">
-                    </div>
-                    <p class="project-description">
-                        An AI-powered academic support app connecting students with subject matter experts
-                        through
-                        a transparent auction-based bidding system.
-                    </p>
-                    <ul class="project-highlights">
-                        <li>Implemented LightGBM regression model to recommend optimal bids by analyzing expertise, task
-                            complexity, and completion time</li>
-                        <li>Successfully deployed app on Google Play Store</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Google Play</span>
-                    </div>
-                </div>
+            <p class="project-desc">Real-time India monitoring dashboard tracking NIFTY/SENSEX, AQI, weather, fuel prices, and news streams across all states — with draggable panels, state-level drill-downs, and serverless edge-cached data sync.</p>
+            <div class="project-tech-row">
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">MapLibre GL</span>
+              <span class="tech-pill">GitHub Actions</span>
+              <span class="tech-pill">YouTube API</span>
+              <span class="tech-pill">Open-Meteo</span>
+              <span class="tech-pill">Wikipedia API</span>
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Education Section -->
-    <section class="education" id="education">
-        <div class="container">
-            <h2 class="section-title section-title-game section-title-centered">Education</h2>
-            <div class="education-cards same-line-grid">
-                <div class="education-card glass-card">
-                    <img src="assets/images/mec-logo.png" alt="Model Engineering College" class="school-logo">
-                    <h3>Bachelor of Technology in Computer Science</h3>
-                    <p class="education-institution">Model Engineering College</p>
-                    <p class="education-location">Kochi, India</p>
-                    <p class="education-date">Nov 2020 - June 2024</p>
-                </div>
-                <div class="education-card glass-card">
-                    <img src="assets/images/chavara-logo.png" alt="Chavara Public School" class="school-logo">
-                    <h3>Higher Secondary Education</h3>
-                    <p class="education-institution">Chavara Public School</p>
-                    <p class="education-location">Pala, India</p>
-                    <p class="education-date">June 2018 - June 2020</p>
-                </div>
-                <div class="education-card glass-card">
-                    <img src="assets/images/alphonsa-logo.png" alt="Alphonsa Residential School" class="school-logo">
-                    <h3>Primary Education</h3>
-                    <p class="education-institution">Alphonsa Residential School</p>
-                    <p class="education-location">Pala, India</p>
-                    <p class="education-date">2006 - 2018</p>
-                </div>
+        <!-- What's Happening in Kerala -->
+        <div class="project-card reveal" data-color="#00897B">
+          <div class="project-color-bar" style="background:#00897B"></div>
+          <div class="project-card-inner">
+            <div class="project-header-row">
+              <h3 class="project-name">Kerala 🥥</h3>
+              <div class="project-btns">
+                <span class="project-visitors-badge" style="background:#00897B;color:white;">⭐ 17 stars</span>
+                <a href="https://what-s-happening-in-kerala.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-gh-btn">↗ LIVE</a>
+              </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section class="achievements" id="achievements">
-        <div class="container">
-            <h2 class="section-title section-title-game section-title-centered">Achievements</h2>
-            <div class="achievements-grid">
-                <a href="https://www.credly.com/badges/ee64f694-de7a-43b6-b295-b0f16c26b4ee/public_url" target="_blank"
-                    rel="noopener noreferrer" class="achievement-card glass-card">
-                    <img src="assets/images/aws-certification.png" alt="AWS Certified Cloud Practitioner"
-                        class="achievement-badge">
-                    <h3>AWS Certified Cloud Practitioner</h3>
-                    <p class="achievement-description">Amazon Web Services - Foundational Level Certification</p>
-                    <span class="achievement-link">View Credential →</span>
-                </a>
-                <a href="https://leetcode.com/u/anand170/" target="_blank" rel="noopener noreferrer"
-                    class="achievement-card glass-card">
-                    <img src="assets/images/leetcode-logo.png" alt="LeetCode Profile" class="achievement-badge">
-                    <h3>LeetCode Problem Solver</h3>
-                    <p class="achievement-description">200+ problems solved across various difficulty levels</p>
-                    <span class="achievement-link">View Profile →</span>
-                </a>
-                <a href="https://ieeexplore.ieee.org/document/11105358" target="_blank" rel="noopener noreferrer"
-                    class="achievement-card glass-card">
-                    <img src="ieee_image.jpg" alt="IEEE Publication" class="achievement-badge">
-                    <h3>IEEE Published Paper</h3>
-                    <p class="achievement-description">Research publication on microservices migration architecture</p>
-                    <span class="achievement-link">Read Paper →</span>
-                </a>
+            <div class="project-image-wrap">
+              <img src="kerala.png" alt="What's Happening in Kerala" class="project-img" />
             </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section-title section-title-game section-title-centered">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category glass-card">
-                    <h3>Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">C/C++</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                    </div>
-                </div>
-                <div class="skill-category glass-card">
-                    <h3>Frameworks</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">FastAPI</span>
-                        <span class="skill-tag">Flask</span>
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">Google ADK</span>
-                    </div>
-                </div>
-                <div class="skill-category glass-card">
-                    <h3>Developer Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Bitbucket Pipeline</span>
-                        <span class="skill-tag">Alloy</span>
-                        <span class="skill-tag">Loki</span>
-                        <span class="skill-tag">Grafana</span>
-                        <span class="skill-tag">Prometheus</span>
-                        <span class="skill-tag">Qdrant</span>
-                    </div>
-                </div>
-                <div class="skill-category glass-card">
-                    <h3>Libraries</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Celery</span>
-                        <span class="skill-tag">LiteLLM</span>
-                    </div>
-                </div>
+            <p class="project-desc">A real-time command-center dashboard for Kerala — weather, air quality, markets, news, seismic activity, fuel prices, festivals, and more in one place. Built with a dark Grafana-inspired UI. Everything you need to know about God's Own Country.</p>
+            <div class="project-tech-row">
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Vercel</span>
+              <span class="tech-pill">Open-Meteo</span>
+              <span class="tech-pill">GitHub Actions</span>
+              <span class="tech-pill">NewsAPI</span>
+              <span class="tech-pill">MapLibre GL</span>
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title section-title-game section-title-centered">Get In Touch</h2>
-            <div class="contact-content">
-                <p class="contact-intro">
-                    I'm always open to discussing new opportunities, collaborations, or just having a chat about
-                    technology.
-                    Feel free to reach out!
-                </p>
-                <div class="contact-methods">
-                    <a href="mailto:anandharikrishnan14@gmail.com" class="contact-card glass-card">
-                        <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                </path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                        </div>
-                        <h3>Email</h3>
-                        <p>Send me an email</p>
-                    </a>
-                    <a href="tel:+919656681806" class="contact-card glass-card">
-                        <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path
-                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3>Phone</h3>
-                        <p class="phone-number">+91-9656681806</p>
-                    </a>
-                    <a href="https://linkedin.com/in/anand-harikrishnan-04b2a5214/" target="_blank" rel="noopener noreferrer"
-                        class="contact-card glass-card">
-                        <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
-                        </div>
-                        <h3>LinkedIn</h3>
-                        <p>Connect with me</p>
-                    </a>
-                    <a href="https://github.com/anand176" target="_blank" rel="noopener noreferrer"
-                        class="contact-card glass-card">
-                        <div class="contact-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                        </div>
-                        <h3>GitHub</h3>
-                        <p>View my code</p>
-                    </a>
-                </div>
+        <!-- PitchmateAI -->
+        <div class="project-card reveal" data-color="#FFD60A">
+          <div class="project-color-bar" style="background:#FFD60A"></div>
+          <div class="project-card-inner">
+            <div class="project-header-row">
+              <h3 class="project-name">PitchmateAI</h3>
+              <a href="https://github.com/anand176/Pitchmate" target="_blank" rel="noopener noreferrer" class="project-gh-btn">↗ GH</a>
             </div>
+            <div class="project-image-wrap">
+              <img src="port3.png" alt="PitchmateAI" class="project-img" />
+            </div>
+            <p class="project-desc">Agentic AI co-pilot for startup founders — reviews your deck, validates your market, crafts GTM strategy, and reaches the right investors. Integrated with Supabase Auth (JWT), pgvector RAG, SerpAPI, and Draw.io MCP for visual roadmaps.</p>
+            <div class="project-tech-row">
+              <span class="tech-pill">FastAPI</span>
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Google ADK</span>
+              <span class="tech-pill">Supabase</span>
+              <span class="tech-pill">pgvector</span>
+              <span class="tech-pill">Serp API</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-game-tag">Continue? — Built with passion and precision</p>
-            <p class="footer-copy">&copy; 2026 Anand Harikrishnan. All rights reserved.</p>
+        <!-- AssignEase -->
+        <div class="project-card reveal" data-color="#8338EC">
+          <div class="project-color-bar" style="background:#8338EC"></div>
+          <div class="project-card-inner">
+            <div class="project-header-row">
+              <h3 class="project-name">AssignEase</h3>
+              <div class="project-btns">
+                <span class="project-visitors-badge" style="background:#8338EC;color:white;">Play Store</span>
+                <a href="https://github.com/anand176/assignease-frontendApp" target="_blank" rel="noopener noreferrer" class="project-gh-btn">↗ GH</a>
+              </div>
+            </div>
+            <div class="project-image-wrap">
+              <img src="port5.png" alt="AssignEase" class="project-img" />
+            </div>
+            <p class="project-desc">AI-powered academic support app connecting students with subject matter experts through a transparent auction-based bidding system. LightGBM regression model recommends optimal bids by analyzing expertise, task complexity, and completion time.</p>
+            <div class="project-tech-row">
+              <span class="tech-pill">Flutter</span>
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">Express.js</span>
+              <span class="tech-pill">MongoDB</span>
+              <span class="tech-pill">LightGBM</span>
+              <span class="tech-pill">Google Play</span>
+            </div>
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills section-pad" id="skills">
+    <div class="container">
+      <div class="section-label">04 — SKILLS</div>
+      <h2 class="section-title">WHAT I WORK WITH.</h2>
+      <div class="skills-grid">
+        <div class="skill-block neo-card neo-card-yellow reveal">
+          <h3 class="skill-cat">Languages & Databases</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">MongoDB</span>
+          </div>
+        </div>
+        <div class="skill-block neo-card neo-card-pink reveal">
+          <h3 class="skill-cat">Frameworks & Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Apache Kafka</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">Celery</span>
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">Grafana</span>
+          </div>
+        </div>
+        <div class="skill-block neo-card neo-card-blue reveal">
+          <h3 class="skill-cat">AI / ML Stack</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Google ADK</span>
+            <span class="skill-tag">AWS Bedrock</span>
+            <span class="skill-tag">LiteLLM</span>
+            <span class="skill-tag">pgvector</span>
+            <span class="skill-tag">Pinecone</span>
+            <span class="skill-tag">Qdrant</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">LLM Agents</span>
+            <span class="skill-tag">MCP</span>
+          </div>
+        </div>
+        <div class="skill-block neo-card neo-card-green reveal">
+          <h3 class="skill-cat">Core Concepts</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Microservices</span>
+            <span class="skill-tag">System Design</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Computer Networks</span>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">DSA</span>
+            <span class="skill-tag">Observability</span>
+            <span class="skill-tag">RBAC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Achievements -->
+  <section class="edu-achieve section-pad" id="education">
+    <div class="container">
+      <div class="section-label">05 — EDUCATION & ACHIEVEMENTS</div>
+      <h2 class="section-title">BACKGROUND & WINS.</h2>
+
+      <!-- 3 schools -->
+      <div class="edu-schools-grid">
+        <div class="edu-card neo-card neo-card-yellow reveal">
+          <img src="assets/images/mec-logo.png" alt="Model Engineering College" class="edu-logo" />
+          <h3 class="edu-degree">B.Tech in Computer Science</h3>
+          <p class="edu-inst">Model Engineering College</p>
+          <p class="edu-loc">Kochi, India</p>
+          <p class="edu-date">Nov 2020 — June 2024</p>
+          <div class="edu-cgpa-badge">CGPA: 8.36</div>
+        </div>
+        <div class="edu-card neo-card neo-card-blue reveal">
+          <img src="assets/images/chavara-logo.png" alt="Chavara Public School" class="edu-logo" />
+          <h3 class="edu-degree">Higher Secondary (XII)</h3>
+          <p class="edu-inst">Chavara Public School</p>
+          <p class="edu-loc">Pala, India</p>
+          <p class="edu-date">June 2018 — June 2020</p>
+          <div class="edu-cgpa-badge">93.6%</div>
+        </div>
+        <div class="edu-card neo-card neo-card-pink reveal">
+          <img src="assets/images/alphonsa-logo.png" alt="Alphonsa Residential School" class="edu-logo" />
+          <h3 class="edu-degree">Primary & Secondary (X)</h3>
+          <p class="edu-inst">Alphonsa Residential School</p>
+          <p class="edu-loc">Pala, India</p>
+          <p class="edu-date">2006 — 2018</p>
+          <div class="edu-cgpa-badge">89.33%</div>
+        </div>
+      </div>
+
+      <!-- Achievements -->
+      <h3 class="achieve-subhead">ACHIEVEMENTS</h3>
+      <div class="achieve-row">
+        <a href="https://www.credly.com/badges/ee64f694-de7a-43b6-b295-b0f16c26b4ee/public_url" target="_blank" rel="noopener noreferrer" class="achieve-card neo-card neo-card-blue reveal">
+          <img src="assets/images/aws-certification.png" alt="AWS Certification" class="achieve-img" />
+          <div class="achieve-text">
+            <h4>AWS Certified Cloud Practitioner</h4>
+            <p>Amazon Web Services — View Credential ↗</p>
+          </div>
+        </a>
+        <a href="https://ieeexplore.ieee.org/document/11105358" target="_blank" rel="noopener noreferrer" class="achieve-card neo-card neo-card-pink reveal">
+          <img src="ieee_image.jpg" alt="IEEE Publication" class="achieve-img" />
+          <div class="achieve-text">
+            <h4>IEEE Published Paper</h4>
+            <p>Microservices migration for AI container deployment — Read Paper ↗</p>
+          </div>
+        </a>
+        <a href="https://leetcode.com/u/anand170/" target="_blank" rel="noopener noreferrer" class="achieve-card neo-card neo-card-green reveal">
+          <img src="assets/images/leetcode-logo.png" alt="LeetCode" class="achieve-img" />
+          <div class="achieve-text">
+            <h4>LeetCode 200+ Problems</h4>
+            <p>Strong algorithmic and data structures proficiency — View Profile ↗</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section-pad" id="contact">
+    <div class="container">
+      <div class="section-label">06 — CONTACT</div>
+      <div class="contact-inner neo-card neo-card-yellow">
+        <h2 class="contact-title">LET'S WORK TOGETHER.</h2>
+        <p class="contact-sub">Open to new opportunities, collaborations, and interesting conversations about tech.</p>
+        <div class="contact-links-grid">
+          <a href="mailto:anandharikrishnan14@gmail.com" class="contact-link-btn neo-card neo-card-black">
+            <span class="contact-icon">✉</span>
+            <span>anandharikrishnan14@gmail.com</span>
+          </a>
+          <a href="tel:+919656681806" class="contact-link-btn neo-card neo-card-black">
+            <span class="contact-icon">☎</span>
+            <span>+91 9656681806</span>
+          </a>
+          <a href="https://linkedin.com/in/anand-harikrishnan-04b2a5214/" target="_blank" rel="noopener noreferrer" class="contact-link-btn neo-card neo-card-black">
+            <span class="contact-icon">in</span>
+            <span>linkedin.com/in/anand-harikrishnan ↗</span>
+          </a>
+          <a href="https://github.com/anand176" target="_blank" rel="noopener noreferrer" class="contact-link-btn neo-card neo-card-black">
+            <span class="contact-icon">gh</span>
+            <span>github.com/anand176 ↗</span>
+          </a>
+        </div>
+        <a href="https://drive.google.com/file/d/1dj5Hz4Y1Dc6NU32wV5x3Aki4oWCXod_h/view?usp=drive_link"
+           target="_blank" rel="noopener noreferrer" class="resume-big-btn">
+          DOWNLOAD RESUME ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-social-row">
+        <a href="https://linkedin.com/in/anand-harikrishnan-04b2a5214/" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="LinkedIn">
+          <img src="logo/linkedin-real.jpg" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/anand176" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="GitHub">
+          <img src="logo/github-logo.jpg" alt="GitHub" />
+        </a>
+        <a href="https://www.instagram.com/a_n__a_n_d__?igsh=Ym50MDJnZWtkbWJt" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="Instagram">
+          <img src="logo/insta-logo.jpg" alt="Instagram" />
+        </a>
+        <a href="mailto:anandharikrishnan14@gmail.com" class="footer-social-icon" title="Email">
+          <img src="logo/gmail-logo.jpg" alt="Email" />
+        </a>
+      </div>
+      <span class="footer-copy">© 2026 Anand Harikrishnan. Built with precision.</span>
+      <span class="footer-status">● OPEN TO WORK</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
